@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>preloader marmik</title>
+</head>
+<style>
+body {
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+}
+img{
+	vertical-align: middle;
+	width:100%;
+}
+#pageTransition {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff;
+	z-index:99;
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+}
+#mar {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	top:50%; 
+	margin:-100px 0 0 -100px;
+}
+#mar img{
+	width:auto;
+}
+</style>
+<body>
+<div id="pageTransition">
+	<div id="mar">
+		<img src="download.png" id="mar">
+	</div>
+</div>
+<img src="http://74211.com/wallpaper/picture_big/Girl-in-Big-Gray-Eyes-and-Black-Dancing-Hair-Peaceful-Facial-Expression-is-Good-Looking-in-the-Pose-and-Look-HD-Attractive-Women-Wallpaper.jpg">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#mar').slideUp();
+	$('#pageTransition').delay(350).slideUp('slow');
+	$('body').delay(350).css({'overflow':'visible'});
+})
+</script> 
+</body>
+</html>
